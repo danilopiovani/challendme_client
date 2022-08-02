@@ -1,0 +1,39 @@
+/*=============================================>>>>>
+= Typography Mixins and Variables =
+===============================================>>>>>*/
+
+@mixin button-font() {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+@mixin general-font() {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+@mixin logo-font1() {
+  font-family: 'Playball', cursive;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+@mixin logo-font2() {
+  font-family: 'Shadows Into Light Two', cursive;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+@mixin logo-font3() {
+  font-family: 'Mandali', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+@mixin logo-font4() {
+  font-family: 'Poiret One', cursive;
+  font-size: 14px;
+  font-weight: 400;
+}

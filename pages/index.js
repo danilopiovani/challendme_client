@@ -1,15 +1,25 @@
 import React from 'react';
 import { useSettingsStore } from '/tools/store/';
+import { Button } from 'components';
 
 const Home = () => {
   const { darkMode, toggleDarkMode } = useSettingsStore();
   return (
     <div
-      Style={`width:300px; height:300px; background-color: ${
+      Style={`padding:10px; width:100vw; height:100vh; background-color: ${
         darkMode ? 'black' : 'white'
       }`}
     >
-      <button onClick={() => toggleDarkMode()}>Toggle</button>
+      <Button
+        onClick={() => toggleDarkMode()}
+        icon="BiPlus"
+        // iconPosition="btn--icon-left"
+        size="btn--sm"
+        variant="btn--light"
+        stretch={true}
+      >
+        Toggle
+      </Button>
     </div>
   );
 };

@@ -1,0 +1,38 @@
+.textareaWrapper {
+  position: relative;
+  .textarea {
+    resize: none;
+    @include general-font;
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    border: 1px solid $info;
+    border-radius: 5px;
+    gap: 5px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    font-size: 1.2rem;
+    color: darken($info, 30%);
+  }
+  .textarea::placeholder {
+    color: lighten($primary, 10%);
+    text-transform: uppercase;
+  }
+  .textarea:focus {
+    outline: 0;
+  }
+  .warning {
+    color: $danger;
+    // border: 1px solid red;
+    position: absolute;
+    width: fit-content;
+    top: -7px;
+    left: 15px;
+    background-color: white;
+    padding: 0 5px;
+    text-transform: uppercase;
+  }
+}

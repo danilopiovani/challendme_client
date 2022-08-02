@@ -1,0 +1,23 @@
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  .dateWrapper {
+    display: grid;
+    grid-template-columns: 60% auto;
+    gap: 10px;
+  }
+
+  .pageButton {
+    align-self: flex-end;
+  }
+  .titleContainer {
+    position: absolute;
+    top: -7px;
+    left: 15px;
+    background-color: white;
+    padding: 0 10px;
+    text-transform: uppercase;
+  }
+}

@@ -1,0 +1,226 @@
+.mainContainer {
+  @include general-font;
+  position: relative;
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  border: 1px solid $info;
+  border-radius: 5px;
+  gap: 5px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  color: darken($info, 30%);
+  .icon {
+    span {
+      display: flex;
+      align-items: center;
+      align-content: center;
+      justify-content: center;
+      line-height: normal;
+      font-size: 1.2rem;
+      padding: 5px;
+      color: black;
+    }
+  }
+  input {
+    color: darken($info, 30%);
+    width: 100%;
+    height: 100%;
+    border: 0;
+    font-size: 1.2rem;
+  }
+  input:focus {
+    outline: none;
+    color: darken($info, 30%);
+  }
+  input::placeholder {
+    color: lighten($primary, 10%);
+    text-transform: uppercase;
+  }
+  input::-webkit-datetime-edit {
+    // padding: 1em;
+    text-transform: uppercase;
+  }
+  input::-webkit-datetime-edit-fields-wrapper {
+    background: transparent;
+  }
+  input::-webkit-datetime-edit-text {
+    color: darken($info, 30%);
+  }
+  input::-webkit-datetime-edit-month-field {
+    color: darken($info, 30%);
+  }
+  input::-webkit-datetime-edit-day-field {
+    color: darken($info, 30%);
+  }
+  input::-webkit-datetime-edit-year-field {
+    color: darken($info, 30%);
+  }
+  input::-webkit-inner-spin-button {
+    display: none;
+  }
+  input::-webkit-calendar-picker-indicator {
+    // background: orange;
+  }
+  .warning {
+    color: $danger;
+    // border: 1px solid red;
+    position: absolute;
+    width: fit-content;
+    top: -7px;
+    left: 15px;
+    background-color: white;
+    padding: 0 5px;
+    text-transform: uppercase;
+  }
+}
+
+// .inputWrapper {
+//   @include general-font;
+//   position: relative;
+//   width: 100%;
+//   height: fit-content;
+
+//   .inputDefault {
+//     display: flex;
+//     flex-direction: row;
+//     width: 100%;
+//     height: fit-content;
+
+//     .Input {
+//       position: relative;
+//       width: 100%;
+//       display: flex;
+//       flex-direction: row;
+
+//       input {
+//         background: transparent;
+//         width: 100%;
+//         border: 0;
+//         padding: 3px;
+//       }
+//       input:focus {
+//         outline: none;
+//       }
+//       input::placeholder {
+//         color: #9e9e9e;
+//         text-transform: uppercase;
+//         width: 100%;
+//         // height: 100%; safari placeholder not aligned vertical
+//         margin: 0;
+//         padding: 0;
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//       }
+//     }
+
+//     .icon {
+//       position: absolute;
+//       right: 5px;
+//       top: 50%;
+//       transform: translateY(-50%);
+//       width: 20px;
+//       img {
+//         display: flex;
+//         align-items: center;
+//         justify-content: center;
+//         align-items: center;
+//         object-fit: fill;
+//         width: 100%;
+//         height: 100%;
+//         cursor: pointer;
+//       }
+//     }
+//   }
+
+//   .outlined,
+//   .filled {
+//     border-radius: 10px;
+//     background-color: $off-white;
+//   }
+//   .outlined {
+//     border: 1px solid #9e9e9e;
+//   }
+//   .standard {
+//     border: 0;
+//     border-bottom: 1px solid #9e9e9e;
+//   }
+//   .signUp {
+//     border: 1px solid #f2f2f2;
+//   }
+
+//   .sm {
+//     padding: 3px 10px;
+//     .Input {
+//       input::placeholder {
+//         font-size: 0.8rem;
+//       }
+//     }
+//     .icon {
+//       width: 1.2rem;
+//     }
+//   }
+
+//   .md {
+//     padding: 5px 10px;
+//     font-size: 10px;
+//     .Input {
+//       input::placeholder {
+//         font-size: 1rem;
+//       }
+//     }
+//     .icon {
+//       width: 1.28rem;
+//     }
+//   }
+//   .lg {
+//     padding: 10px;
+//     font-size: 10px;
+//     .Input {
+//       input::placeholder {
+//         font-size: 1.2rem;
+//       }
+//     }
+//     .icon {
+//       width: 1.2rem;
+//     }
+//   }
+// }
+
+// .warning {
+//   z-index: 5;
+//   position: absolute;
+//   left: 10px;
+//   bottom: -9px;
+//   max-width: 25em;
+//   pointer-events: none;
+//   border-radius: 50px;
+//   border: 1px solid black;
+//   text-align: left;
+//   padding: 0.5px 0.5em;
+//   text-transform: uppercase;
+//   font-size: 13px;
+// }
+// .warning.error {
+//   background-color: #fde3db;
+//   color: #f37449;
+//   border-color: #f37449;
+// }
+// .warning.success {
+//   background-color: $off-white;
+//   color: green;
+//   border-color: green;
+// }
+// .warning.info {
+//   background-color: $off-white;
+//   color: blue;
+//   border-color: blue;
+// }
+// .warning.default {
+//   background-color: $off-white;
+//   color: $black;
+//   border-color: $black;
+// }

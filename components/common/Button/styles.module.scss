@@ -1,0 +1,346 @@
+.btn {
+  @include button-font;
+  width: fit-content;
+  height: 3rem;
+  min-width: 100px;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  border: 0;
+  text-transform: uppercase;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  .btnText,
+  .btnIcon {
+    display: inline-flex;
+    align-items: center;
+    padding: 0 8px;
+    height: 100%;
+  }
+  .btnText {
+    white-space: nowrap;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .btnIcon {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: 0;
+    height: 100%;
+  }
+}
+.btn:hover,
+.btn:active {
+  box-shadow: 0 0.5em 0.5em -0.4em gray;
+  transform: translateY(-0.25em);
+}
+
+.btn.stretch {
+  width: 100%;
+}
+
+.btn--icon-left {
+  flex-direction: row-reverse;
+  .btnIcon {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border: 0;
+    height: 100%;
+  }
+}
+
+// SOLID BUTTONS
+// btn--primary
+.btn--primary {
+  background-color: $primary;
+  color: $black;
+  .btnIcon {
+    background-color: darken($primary, 10%);
+  }
+}
+.btn--primary:hover {
+  background-color: darken($primary, 10%);
+}
+.btn--primary.active {
+  background-color: darken($primary, 20%);
+}
+
+// btn--secondary
+.btn--secondary {
+  background-color: $secondary;
+  color: $black;
+  .btnIcon {
+    background-color: darken($secondary, 10%);
+  }
+}
+.btn--secondary:hover {
+  background-color: darken($secondary, 10%);
+}
+.btn--secondary.active {
+  background-color: darken($secondary, 20%);
+}
+.btn--secondary.active:hover {
+  background-color: darken($secondary, 20%);
+}
+
+// btn--success
+.btn--success {
+  background-color: $success;
+  color: $white;
+  .btnIcon {
+    background-color: darken($success, 10%);
+  }
+}
+.btn--success:hover {
+  background-color: darken($success, 10%);
+}
+.btn--success.active {
+  background-color: darken($success, 20%);
+}
+.btn--success.active:hover {
+  background-color: darken($success, 20%);
+}
+
+// btn--warning
+.btn--warning {
+  background-color: $warning;
+  color: $white;
+  .btnIcon {
+    background-color: darken($warning, 10%);
+  }
+}
+.btn--warning:hover {
+  background-color: darken($warning, 10%);
+}
+.btn--warning.active {
+  background-color: darken($warning, 20%);
+}
+.btn--warning.active:hover {
+  background-color: darken($warning, 20%);
+}
+
+// btn--danger
+.btn--danger {
+  background-color: $danger;
+  color: $white;
+  .btnIcon {
+    background-color: darken($danger, 10%);
+  }
+}
+.btn--danger:hover {
+  background-color: darken($danger, 10%);
+}
+.btn--danger.active {
+  background-color: darken($danger, 20%);
+}
+.btn--danger.active:hover {
+  background-color: darken($danger, 20%);
+}
+
+// btn--info
+.btn--info {
+  background-color: $info;
+  color: $white;
+  .btnIcon {
+    background-color: darken($info, 10%);
+  }
+}
+.btn--info:hover {
+  background-color: darken($info, 10%);
+}
+.btn--info.active {
+  background-color: darken($info, 20%);
+}
+.btn--info.active:hover {
+  background-color: darken($info, 20%);
+}
+
+// btn--light
+.btn--light {
+  background-color: $light;
+  color: $black;
+  .btnIcon {
+    background-color: darken($light, 10%);
+  }
+}
+.btn--light:hover {
+  background-color: darken($light, 10%);
+}
+.btn--light.active {
+  background-color: darken($light, 20%);
+}
+.btn--light.active:hover {
+  background-color: darken($light, 20%);
+}
+
+// btn--dark
+.btn--dark {
+  background-color: $dark;
+  color: $white;
+  .btnIcon {
+    background-color: darken($dark, 10%);
+  }
+}
+.btn--dark:hover {
+  background-color: darken($dark, 10%);
+}
+.btn--dark.active {
+  background-color: darken($dark, 20%);
+}
+.btn--dark.active:hover {
+  background-color: darken($dark, 20%);
+}
+
+// OUTLINE BUTTONS
+// btn--primary--outline
+.btn--primary--outline {
+  background-color: transparent;
+  color: $primary;
+  border: 1px solid $primary;
+}
+.btn--primary--outline:hover {
+  background-color: $primary;
+  color: $black;
+}
+
+// btn--secondary--outline
+.btn--secondary--outline {
+  background-color: transparent;
+  color: $secondary;
+  border: 1px solid $secondary;
+}
+.btn--secondary--outline:hover {
+  background-color: $secondary;
+  color: $black;
+}
+
+// btn--success--outline
+.btn--success--outline {
+  background-color: transparent;
+  color: $success;
+  border: 1px solid $success;
+}
+.btn--success--outline:hover {
+  background-color: $success;
+  color: $white;
+}
+
+// btn--warning--outline
+.btn--warning--outline {
+  background-color: transparent;
+  color: $warning;
+  border: 1px solid $warning;
+}
+.btn--warning--outline:hover {
+  background-color: $warning;
+  color: $white;
+}
+
+// btn--danger--outline
+.btn--danger--outline {
+  background-color: transparent;
+  color: $danger;
+  border: 1px solid $danger;
+}
+.btn--danger--outline:hover {
+  background-color: $danger;
+  color: $white;
+}
+
+// btn--info--outline
+.btn--info--outline {
+  background-color: transparent;
+  color: $info;
+  border: 1px solid $info;
+}
+.btn--info--outline:hover {
+  background-color: $info;
+  color: $white;
+}
+
+// btn--light--outline
+.btn--light--outline {
+  background-color: transparent;
+  color: darken($light, 20%);
+  border: 1px solid $light;
+}
+.btn--light--outline:hover {
+  background-color: $light;
+  color: $black;
+}
+
+// btn--dark--outline
+.btn--dark--outline {
+  background-color: transparent;
+  color: $dark;
+  border: 1px solid $dark;
+}
+.btn--dark--outline:hover {
+  background-color: $dark;
+  color: $white;
+}
+
+// DISABLED BUTTON
+.btnDisabled {
+  background-color: $light;
+  border: 1px solid darken($light, 20%);
+  .btnText {
+    color: darken($light, 20%);
+  }
+  .btnIcon {
+    background-color: $light;
+    color: darken($light, 20%);
+  }
+}
+.btnDisabled:hover {
+  transform: none;
+  box-shadow: none;
+  background-color: $light;
+  border: 1px solid darken($light, 20%);
+  .btnText {
+    color: darken($light, 20%);
+  }
+  .btnIcon {
+    background-color: $light;
+    color: darken($light, 20%);
+  }
+}
+
+// SIZES
+.btn--sm {
+  .btnText {
+    margin: 10px 10px;
+    font-size: 1rem;
+  }
+  .btnIcon {
+    font-size: 1.5em;
+  }
+}
+.btn--md {
+  height: 4rem;
+  .btnText {
+    margin: 15px 15px;
+    font-size: 1.5rem;
+  }
+  .btnIcon {
+    font-size: 2em;
+  }
+}
+.btn--lg {
+  height: 5rem;
+  .btnText {
+    margin: 20px 20px;
+    font-size: 2rem;
+  }
+  .btnIcon {
+    font-size: 2.5em;
+  }
+}
