@@ -12,7 +12,24 @@
     background-color: lighten($dark, 10%);
     input,
     textarea {
+      color: $light !important;
       background-color: lighten($dark, 10%);
+    }
+    input::placeholder,
+    textarea::placeholder {
+      color: lighten($dark, 20%) !important;
+    }
+    input::-webkit-datetime-edit-text {
+      color: $light !important;
+    }
+    input::-webkit-datetime-edit-month-field {
+      color: $light !important;
+    }
+    input::-webkit-datetime-edit-day-field {
+      color: $light !important;
+    }
+    input::-webkit-datetime-edit-year-field {
+      color: $light !important;
     }
   }
 }
