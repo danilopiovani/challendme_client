@@ -93,4 +93,76 @@
       }
     }
   }
+
+  .navContainerSmall {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: $dark;
+    height: 100vh;
+    width: 90vw;
+    z-index: 100;
+    visibility: hidden;
+  }
+  .hamburguerIcon {
+    visibility: hidden;
+  }
+}
+
+@media (max-width: 800px) {
+  .mainContainer {
+    .navContainer {
+      border: 1px solid red;
+      display: none;
+    }
+    .navContainerSmall {
+      position: fixed;
+      width: 0;
+      height: 100vh;
+      visibility: hidden;
+      top: 0;
+      right: 0;
+      background-color: $dark;
+      transition: visibility 0s 1s, width 0.5s ease-in-out;
+      .navItemContainer {
+        width: 100%;
+        height: 100%;
+        visibility: hidden;
+      }
+
+      &.navOpen {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        visibility: visible;
+        opacity: 1;
+        width: 90vw;
+        transition: width 0.5s ease-in-out;
+        .navItemContainer {
+          width: 100%;
+          height: 100%;
+          visibility: visible;
+          transition: visibility 0s 0.5s;
+          padding: 20px;
+          .navItem {
+            @include logo-font4;
+            color: $yellowTheme;
+            padding: 10px;
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+    .hamburguerIcon {
+      visibility: visible;
+      color: lighten($dark, 20%);
+      position: absolute;
+      top: 20px;
+      right: 10px;
+      font-size: 3rem;
+      z-index: 101;
+    }
+  }
 }

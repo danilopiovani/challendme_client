@@ -11,7 +11,10 @@ const Challenges = () => {
       </div>
       <Spacer />
 
-      <div className={styles.challengeList}>Challend List</div>
+      <div className={styles.challengeList}>
+        <div>My Challenges</div>
+        <div></div>
+      </div>
     </div>
   );
 };

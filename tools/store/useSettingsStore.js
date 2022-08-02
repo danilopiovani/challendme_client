@@ -4,6 +4,7 @@ import { devtools, persist } from 'zustand/middleware';
 // SETTING STORE
 const createSettingsStore = (set) => ({
   darkMode: false,
+  navbar: false,
   modal: {
     isOpen: false,
     modalName: null,
@@ -18,6 +19,11 @@ const createSettingsStore = (set) => ({
   toggleDarkMode: () =>
     set((state) => ({
       darkMode: !state.darkMode,
+    })),
+
+  toggleNavBar: () =>
+    set((state) => ({
+      navbar: !state.navbar,
     })),
 
   setModal: (isOpen, modalName, modalProps) => {

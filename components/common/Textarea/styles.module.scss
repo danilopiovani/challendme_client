@@ -34,5 +34,12 @@
     background-color: white;
     padding: 0 5px;
     text-transform: uppercase;
+    &.darkMode {
+      background-color: $danger; //lighten($dark, 10%);
+      color: $yellowTheme;
+      border-radius: 3px;
+      padding: 2px 5px;
+      top: -8px;
+    }
   }
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './styles.module.scss';
 import { BsEye, BsEyeSlash, BsCalendar } from 'react-icons/bs';
+import { useSettingsStore } from '/tools/store/';
 
 const variantList = ['filled', 'standard', 'outlined'];
 const sizeList = ['sm', 'md', 'lg'];
@@ -25,6 +26,7 @@ const Input = (props) => {
     name,
     ...newProps
   } = props;
+  const { darkMode } = useSettingsStore();
   const checkVariant = variantList.includes(variant) ? variant : variantList[0];
   const checkType = typeList.includes(type) ? type : typeList[0];
   const checkIcon = iconList.includes(icon) ? icon : null;
@@ -57,7 +59,11 @@ const Input = (props) => {
         </div>
       )}
       {!!warning && (
-        <div className={`${styles.warning} ${warningStyleList[warningType]}`}>
+        <div
+          className={`${styles.warning} ${warningStyleList[warningType]} ${
+            darkMode ? styles.darkMode : ''
+          }`}
+        >
           {warning}
         </div>
       )}

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styles from './styles.module.scss';
-
+import { useSettingsStore } from '/tools/store/';
 const Textarea = (props) => {
   const {
     cols = 30,
@@ -12,7 +12,7 @@ const Textarea = (props) => {
     onChange,
     ...newProps
   } = props;
-  const [isFocus, setIsFocus] = useState(false);
+  const { darkMode } = useSettingsStore();
   return (
     <div className={styles.textareaWrapper}>
       <textarea
@@ -27,7 +27,11 @@ const Textarea = (props) => {
         value={value}
         onChange={(e) => onChange(e)}
       />
-      {!!warning && <div className={`${styles.warning}`}>{warning}</div>}
+      {!!warning && (
+        <div className={`${styles.warning} ${darkMode ? styles.darkMode : ''}`}>
+          {warning}
+        </div>
+      )}
     </div>
   );
 };
