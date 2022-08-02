@@ -1,8 +1,10 @@
 import React from 'react';
 import styles from './styles.module.scss';
+import { useSettingsStore } from '/tools/store/';
 const Header = () => {
+  const { darkMode, toggleDarkMode } = useSettingsStore();
   return (
-    <div className={styles.mainContainer}>
+    <div className={`${styles.mainContainer} ${darkMode ? styles.dark : ''}`}>
       <div className={styles.logoContainer}>
         <div className={styles.logoSquare}>
           <span>ChallendMe</span>
@@ -13,7 +15,10 @@ const Header = () => {
           <span>Home</span>
         </div>
         <div className={styles.navItem}>
-          <span>Challenges</span>
+          <span onClick={() => toggleDarkMode()}>My Challenges</span>
+        </div>
+        <div className={styles.navItem}>
+          <span onClick={() => toggleDarkMode()}>Top Challenges</span>
         </div>
       </div>
     </div>
