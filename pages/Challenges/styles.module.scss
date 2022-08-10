@@ -7,6 +7,31 @@
   .newChallengeWrapper {
     width: 50%;
   }
+  .challengeListWrapper {
+    width: 100%;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    .challengeList {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      .challengeItem {
+        display: grid;
+        grid-template-columns: 50% 30% 20%;
+        text-align: center;
+        background-color: lighten($primary, 15%);
+        padding: 10px;
+        .challengeTitle {
+          text-align: start;
+        }
+      }
+      .challengeItem:nth-child(even) {
+        background-color: $white;
+      }
+    }
+  }
 }
 
 @media (max-width: 1080px) {

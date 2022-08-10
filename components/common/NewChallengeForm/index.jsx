@@ -87,8 +87,8 @@ const NewChallengeForm = () => {
         />
       </div>
       <Button
-        variant="btn--primary"
-        size="btn--sm"
+        variant="primary"
+        size="sm"
         active={false}
         icon="BiPlus"
         onClick={handleAddClick}

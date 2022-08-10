@@ -138,7 +138,7 @@
         align-items: center;
         visibility: visible;
         opacity: 1;
-        width: 90vw;
+        width: 70vw;
         transition: width 0.5s ease-in-out;
         .navItemContainer {
           width: 100%;
@@ -147,10 +147,10 @@
           transition: visibility 0s 0.5s;
           padding: 20px;
           .navItem {
-            @include logo-font4;
+            @include general-font;
             color: $yellowTheme;
             padding: 10px;
-            font-size: 1.5rem;
+            font-size: 1.2rem;
           }
         }
       }
